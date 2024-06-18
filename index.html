@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta property="og:url" content="https://xn--7f7br4ej8a.com/">
+<meta property="og:title" content="풀티켓">
+<meta property="og:description" content="풀티켓">
+<meta name="description" content="풀티켓">
+<link rel="canonical" href="https://xn--7f7br4ej8a.com/">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    <title>풀티켓</title>
+
+    <script src="https://unpkg.com/swiper@10.2.0/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10.2.0/swiper-bundle.min.css"/>
+</head>
+<body>
+
+<!-- 
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <img src="popup.jpg" alt="Popup Image">
+    </div>
+</div>
+-->
+
+<div class="table-wrap">
+	<img src="./content.jpg" usemap="#map01" class="responsive-img">
+    <div class="table-header-wrap">
+        <span>접수일</span>
+        <span>접수정보</span>
+        <span>거래품목</span>
+        <span>진행상태</span>
+    </div>
+
+    <div class="table-main-wrap mySwiper">
+        <div class="swiper-wrapper">
+            <div class="table-item-wrap swiper-slide">
+                <span class="day"></span>
+                <span><strong class="name"></strong><strong2 class="content"> 150,000원 상담접수완료</strong2></span>
+                <span class="item"></span>
+                <span class="status"></span>
+            </div>
+
+           <div class="table-item-wrap swiper-slide">
+               <span class="day"></span>
+                <span><strong class="name"></strong><strong2 class="content"> 상담접수완료</strong2></span>
+                <span class="item"></span>
+                <span class="status"></span>
+            </div>
+
+            <div class="table-item-wrap swiper-slide">
+                <span class="day"></span>
+                <span><strong class="name"></strong><strong2 class="content"> 상담접수완료</strong2></span>
+                <span class="item"></span>
+                <span class="status"></span>
+            </div>
+
+            <div class="table-item-wrap swiper-slide">
+                <span class="day"></span>
+                <span><strong class="name"></strong><strong2 class="content"> 상담접수완료</strong2></span>
+                <span class="item"></span>
+                <span class="status"></span>
+            </div>
+
+            <div class="table-item-wrap swiper-slide">
+                <span class="day"></span>
+                <span><strong class="name"></strong><strong2 class="content"> 상담접수완료</strong2></span>
+                <span class="item"></span>
+                <span class="status"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="banner">
+	<a href="http://qr.kakao.com/talk/8uRkdeb4s298TIWxxKoQAWRhIkM-">
+        	<img src="./btn_1.png" alt="버튼 1">
+	</a>
+
+	<a href="tel:010-8187-6561">
+    
+        	<img src="./btn_2.png" alt="버튼 2">
+	</a>
+</div>
+
+<style>
+    footer { 
+        padding: 33px 0; 
+        margin: auto; /* 배너를 화면 가운데에 정렬 */
+        text-align: center; 
+        font-size: 15px; 
+        line-height: 1.8em; 
+        color:#ffffff; 
+        background:#525252; }
+
+
+    .banner {
+        position: fixed;
+        height: 100px;
+        justify-content: center;
+        left: 0; /* 배너를 화면 가운데에 정렬 */
+        right: 0; /* 배너를 화면 가운데에 정렬 */
+        margin: auto; /* 배너를 화면 가운데에 정렬 */
+        width: 1080px;
+        bottom: 0;
+        display: flex; /* flexbox를 사용하여 자식 요소들을 가로로 배치 */
+        justify-content: space-between; /* 배너 사이에 공간을 동일하게 배분 */
+    }
+
+</style>
+<footer>
+    상호 : 풀티켓
+    대표전화 : 010-8187-6561
+    <br>
+    카카오톡 : PLTK 대표자 : 진홍준<br>
+    Copyright 풀티켓. All rights reserved.
+</footer>
+
+<style type="text/css">
+    img[usemap] {
+     border: none;
+     height: 100%;
+     max-width: 100%;
+     width: auto;
+    }
+   </style>
+
+<script>
+
+   $(document).ready(function() {
+	   $('img[usemap]').rwdImageMaps();
+   });
+
+window.addEventListener('resize', adjustImageMap);
+
+
+
+function adjustImageMap() {
+    var image = document.querySelector('img[usemap]');
+    var imageWidth = image.offsetWidth;
+    var imageHeight = image.offsetHeight;
+
+    var originalWidth = image.getAttribute('data-original-width');
+    var originalHeight = image.getAttribute('data-original-height');
+
+    var widthRatio = imageWidth / originalWidth;
+    var heightRatio = imageHeight / originalHeight;
+
+    var map = document.querySelector('map');
+    var areas = map.querySelectorAll('area');
+
+    areas.forEach(function(area) {
+        var coords = area.getAttribute('data-coords').split(',');
+        var adjustedCoords = coords.map(function(coord, index) {
+            return index % 2 === 0 ? coord * widthRatio : coord * heightRatio;
+        });
+        area.coords = adjustedCoords.join(',');
+    });
+}
+
+// Call the function initially to adjust the image map on page load
+adjustImageMap();
+ </script>
+
+
+<map name = "map01" id="map01">
+    <area target="" alt="" title="" href="http://qr.kakao.com/talk/8uRkdeb4s298TIWxxKoQAWRhIkM-" coords="499,1530,182,1440" shape="rect">
+    <area target="" alt="" title="" href="http://qr.kakao.com/talk/8uRkdeb4s298TIWxxKoQAWRhIkM-" coords="180,3063,498,3149" shape="rect">
+    <area target="" alt="" title="" href="http://qr.kakao.com/talk/8uRkdeb4s298TIWxxKoQAWRhIkM-" coords="181,4327,498,4415" shape="rect">
+    <area target="" alt="" title="" href="http://qr.kakao.com/talk/8uRkdeb4s298TIWxxKoQAWRhIkM-" coords="183,6630,496,6721" shape="rect">
+    <area target="" alt="" title="" href="tel:010-8187-6561" coords="513,1438,898,1531" shape="rect">
+    <area target="" alt="" title="" href="tel:010-8187-6561" coords="513,3059,898,3152" shape="rect">
+    <area target="" alt="" title="" href="tel:010-8187-6561" coords="514,4322,896,4416" shape="rect">
+    <area target="" alt="" title="" href="tel:010-8187-6561" coords="514,6630,898,6722" shape="rect">
+</map>
+
+<script>
+
+
+    
+    const nameData = ['[임**]', '[박**]', '[박**]', '[이**]', '[정**]', '[백**]', '[권**]', '[강**]', '[전**]', '[이**]', '[정**]', '[이**]', '[김**]', '[김**]', '[이**]']
+    const statusData = ['입금완료', '입금완료', '입금완료', '대기중']
+    const itemData = ['롯데상품권', '신세계상품권', '컬쳐랜드', '도서상품권', '해피문화상품권', '스타벅스E카드', '현대백화점상품권', '갤러리아상품권']
+    const priceData = ['50,000원', '70,000원', '100,000원', '100,000원', '150,000원', '200,000원', '300,000원', '350,000원', '80,000원', '150,000원']
+
+    window.addEventListener('load', () => {
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 7,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        });
+
+        const now = new Date();
+        const month = (now.getMonth() + 1).toString().padStart(2, "0");
+        const day = now.getDate().toString().padStart(2, "0");
+        const today = `${month}월 ${day}일`;
+
+        const dayEl = document.querySelectorAll('.day');
+        dayEl.forEach(e => {
+            e.innerHTML = today;
+        });
+
+
+        function getRandomIndex(n) {
+            return Math.floor(Math.random() * n);
+        }
+
+        function applyDataToElements(selector, data) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(e => {
+                const num = getRandomIndex(data.length);
+                e.innerHTML = data[num];
+            });
+        }
+
+        const STATUS_COMPLETE = '입금완료';
+        const STATUS_PENDING = '대기중';
+
+        function applyStatusToElements(selector, data) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(e => {
+                const num = getRandomIndex(data.length);
+                const html = data[num] === STATUS_COMPLETE ? `<i class='icon-check'></i>${STATUS_COMPLETE}` : `<i class='icon-caution'></i>${STATUS_PENDING}`;
+                e.innerHTML = html;
+            });
+        }
+
+        // 사용 예
+        applyDataToElements('.name', nameData);
+        applyDataToElements('.item', itemData);
+        applyStatusToElements('.status', statusData);
+        applyDataToElements('.price', priceData);
+
+
+        setInterval(() => {
+            let num = Math.floor(Math.random() * 10);
+            const name = nameData[num];
+
+            num = Math.floor(Math.random() * 4);
+            const status = statusData[num] === '입금완료' ? "<i class='icon-check'></i>입금완료" : "<i class='icon-caution'></i>대기중";
+
+             num = Math.floor(Math.random() * 4);
+             const price = priceData[num];
+
+             const item = itemData[num];
+
+            let html = '';
+            html += '<div class="table-item-wrap swiper-slide">';
+                html += '    <span class="day">'+today+'</span>';
+            html += '    <span><strong class="name">'+name+'</strong><strong2 class="content"> '+price+' 상담접수완료</strong2></span>';
+            html += '    <span class="item">'+item+'</span>';
+            html += '    <span class="status">'+status+'</span>';
+            html += '</div>';
+
+            const el = document.querySelector('.swiper-wrapper');
+            el.insertAdjacentHTML('beforeend', html)
+            swiper.update();
+        }, 5);
+    });
+
+
+
+// Get the popup
+var popup = document.getElementById("popup");
+
+// Get the <span> element that closes the popup
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the popup
+span.onclick = function() {
+    popup.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the popup, close it
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+
+window.onload = function() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
+
+</script>
+
+<style>
+    /* 팝업 */
+    .popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 팝업 END */
+
+
+
+
+
+/* 기본 스타일 */
+.responsive-img {
+  width: 100%; /* 이미지의 너비를 부모 요소의 100%로 설정하여 화면 크기에 맞게 조정 */
+}
+
+/* 모바일 화면을 위한 @media 쿼리 */
+@media (max-width: 768px) {
+  .responsive-img {
+    max-width: 100%; /* 모바일 화면에서 이미지의 최대 너비를 100%로 조정 */
+  }
+}
+    .icon-check:before {
+        content: '';
+        background: url("data:image/svg+xml;charset=UTF-8,%3csvg style='color: %23008000;' class='svg-inline--fa fa-check fa-w-16' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' data-fa-i2svg=''%3e%3cpath fill='currentColor' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3e%3c/path%3e%3c/svg%3e") 0 100% / contain no-repeat;
+        display: block;
+        width: 14px;
+        height: 14px;
+        padding-right: 10px;
+    }
+
+    .icon-caution:before {
+        content: '';
+        background: url("data:image/svg+xml;charset=UTF-8,%3csvg style='color: %23e2d140; width: 13px;' class='svg-inline--fa fa-exclamation fa-w-6' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='exclamation' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' data-fa-i2svg=''%3e%3cpath fill='currentColor' d='M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z'%3e%3c/path%3e%3c/svg%3e") 0 100% / contain no-repeat;
+        display: block;
+        width: 14px;
+        height: 14px;
+        padding-right: 10px;
+    }
+	
+.table-header-wrap,
+.table-main-wrap {
+    width: 100vw; /* Set width to 100% of viewport width */
+    max-width: 1080px; /* Set maximum width to match the image */
+    margin: 0 auto; /* Center horizontally */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+	
+.table-wrap {
+     /* width: 90%; */
+    max-width: 100%; /* Adjusted for responsiveness */
+    margin: 0 auto; /* Center horizontally */
+    position: relative;
+    height: auto;
+    background: #fff;
+    box-shadow: 1.5px 3.99px 27px 0 rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center inline content */
+}
+
+    .table-header-wrap {
+    width: 100%;
+    padding: 10px;
+    height: 30px;
+    display: flex;
+    color: #000000;
+    align-items: center;
+    background: linear-gradient(-45deg, #fffb02, #e73c7e, #23a6d5, #00ff62);
+    background-size: 400% 400%;
+    -webkit-animation: gradient-bg 15s ease infinite;
+    animation: gradient-bg 15s ease infinite;
+    text-align: left;
+    position: absolute;
+    top: 68.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+
+.table-main-wrap {
+    width: 100%;
+    max-height: 400px; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical scroll */
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Webkit-based browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+	
+    .table-header-wrap > span:nth-child(2) {
+        width: 60%;
+        text-align: center;
+    }
+
+    .table-header-wrap > span:not(:nth-child(2)) {
+        width: 20%;
+        text-align: center;
+    }
+
+
+    .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Added to make items wrap */
+    }
+
+    .table-item-wrap {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-height: 50px;
+    padding: 0 10px;
+    width: 100%; /* Adjusted for responsiveness */
+    box-sizing: border-box; /* Added to include padding in width */
+    }
+
+    .table-item-wrap strong {
+        font-weight: 400;
+        color: #290202;
+    }
+
+    .table-item-wrap > span:nth-child(2) {
+        width: 60%;
+        text-align: center;
+    }
+
+    .table-item-wrap > span:not(:nth-child(2)) {
+        width: 20%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @-webkit-keyframes gradient-bg {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes gradient-bg {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+	
+    @media (max-width: 768px) {
+        .table-wrap,
+        .table-header-wrap,
+        .table-main-wrap {
+            width: 100%;
+            max-width: none;
+        }
+    }
+	
+	:root {
+    --mobile-max-height-ratio: 0.3; /* 예시 비율 */
+    --mobile-margin-top-ratio: 0.018; /* 예시 비율 */
+	--mobile-font-size-ratio: 0.0235; /* 예시 비율 */
+	--mobile-padding-size-ratio: 0.007; /* 예시 비율 */
+}
+	@media (max-width: 768px) {
+    .table-main-wrap {
+        top: calc(100vw * 4.18); /* 뷰포트 너비에 비례 */
+        max-height: calc(100vw * var(--mobile-max-height-ratio)); /* 뷰포트 너비에 비례 */
+        margin-top: calc(100vw * var(--mobile-margin-top-ratio)); /* 뷰포트 너비에 비례 */
+    }
+
+
+	
+	
+	
+}
+
+@media (max-width: 768px) {
+    .table-header-wrap, .table-main-wrap {
+        font-size: calc(100vw * var(--mobile-font-size-ratio)); /* 모바일 화면에 적합한 글자 크기로 조정 */
+    }
+	
+    .table-header-wrap {
+        height: calc(100vw * var(--mobile-padding-size-ratio)); /* 뷰포트 너비에 비례 */
+        margin-top: calc(100vw * var(--mobile-padding-size-ratio)); /* 뷰포트 너비에 비례 */
+    }
+	
+	.icon-check:before {
+        content: '';
+        background: url("data:image/svg+xml;charset=UTF-8,%3csvg style='color: %23008000;' class='svg-inline--fa fa-check fa-w-16' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' data-fa-i2svg=''%3e%3cpath fill='currentColor' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3e%3c/path%3e%3c/svg%3e") 0 100% / contain no-repeat;
+        display: block;
+        width: calc(100vw * var(--mobile-font-size-ratio));
+        height: calc(100vw * var(--mobile-font-size-ratio));
+        padding-right: calc(100vw * var(--mobile-padding-size-ratio));
+    }
+
+    .icon-caution:before {
+        content: '';
+        background: url("data:image/svg+xml;charset=UTF-8,%3csvg style='color: %23e2d140; width: 13px;' class='svg-inline--fa fa-exclamation fa-w-6' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='exclamation' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' data-fa-i2svg=''%3e%3cpath fill='currentColor' d='M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z'%3e%3c/path%3e%3c/svg%3e") 0 100% / contain no-repeat;
+        display: block;
+        width: calc(100vw * var(--mobile-font-size-ratio));
+        height: calc(100vw * var(--mobile-font-size-ratio));
+        padding-right: calc(100vw * var(--mobile-padding-size-ratio));
+    }
+}
+
+@media (max-width: 768px) {
+    .table-main-wrap {
+        left: auto;
+        transform: none;
+    }
+
+    .banner {
+        width: 100%; /* 모바일 화면에 맞게 조정 */
+    }
+
+    .banner img{
+        width: 100%; /* 모바일 화면에 맞게 조정 */
+    }
+    .table-header-wrap > span:nth-child(2),
+    .table-item-wrap > span:nth-child(2) {
+        width: 100%; /* 모바일 화면에 맞게 조정 */
+    }
+
+    .table-header-wrap > span:not(:nth-child(2)),
+    .table-item-wrap > span:not(:nth-child(2)) {
+        width: 50%; /* 모바일 화면에 맞게 조정 */
+    }
+}
+
+	
+</style>
+
+</body>
+</html>
